@@ -1,65 +1,111 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React from "react";
+import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
-import { styles } from '../styles'
-import { SectionWrapper } from '../hoc'
-import { fadeIn, textVariant } from '../utils/motion'
-import { testimonials } from '../constants'
+import { styles } from "../styles";
+import { SectionWrapper } from "../hoc";
+import { fadeIn, textVariant } from "../utils/motion";
+import { testimonials } from "../constants";
 
-const FeedBackCard = ({ index, testimonial, name, designation, company, image, signedFile }) => (
-    <motion.div 
-    variants={fadeIn('', 'spring', index * 0.5, 0.75)}
-    className='bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full' >
-      <p className='text-white font-black text-[48px]'>"</p>
+const FeedBackCard = ({
+  index,
+  testimonial,
+  name,
+  designation,
+  company,
+  image,
+  signedFile,
+}) => {
+  const { t } = useTranslation();
 
-      <div className='mt-1'>
-        <p className='text-white tracking-wider text-[18x]'>{testimonial}</p>
+  const getTestimonialKey = (testimonialName) => {
+    const keyMap = {
+      "Lior Ben Shimon": "lior",
+      "Ben Levy": "ben",
+      "Dima Lazar": "dima",
+    };
+    return keyMap[testimonialName];
+  };
+
+  const testimonialKey = getTestimonialKey(name);
+
+  return (
+    <motion.div
+      variants={fadeIn("", "spring", index * 0.5, 0.75)}
+      className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full"
+    >
+      <p className="text-white font-black text-[48px]">"</p>
+
+      <div className="mt-1">
+        <p className="text-white tracking-wider text-[18x]">
+          {testimonialKey
+            ? t(`testimonials.${testimonialKey}Text`)
+            : testimonial}
+        </p>
         <br />
-        <a href={signedFile} className='text-blue-400 hover:text-blue-600' target='_blank'>Full Signed Recommendation</a>
-        <div className='mt-7 flex justify-between items-center gap-1'>
-     
-            <div className='flex-1 flex flex-col'>
-        
-              <p className='text-white font-medium text-[16px]'>
-                <span className='blue-text-gradient'>@</span> {name}
-              </p>
-              <p className='mt-1 text-secondary text-[12px]'>
-              {designation} of {company}
-              </p>
-            </div>
-              <img src={image} alt={`feedback-by-${name}`} 
-                className='w-10 h-10 rounded-full object-cover'
-              />
+        <a
+          href={signedFile}
+          className="text-blue-400 hover:text-blue-600"
+          target="_blank"
+        >
+          {t("sections.fullRecommendation")}
+        </a>
+        <div className="mt-7 flex justify-between items-center gap-1">
+          <div className="flex-1 flex flex-col">
+            <p className="text-white font-medium text-[16px]">
+              <span className="blue-text-gradient">@</span>{" "}
+              {testimonialKey ? t(`testimonials.${testimonialKey}Name`) : name}
+            </p>
+            <p className="mt-1 text-secondary text-[12px]">
+              {testimonialKey
+                ? t(`testimonials.${testimonialKey}Designation`)
+                : designation}{" "}
+              of{" "}
+              {testimonialKey
+                ? t(`testimonials.${testimonialKey}Company`)
+                : company}
+            </p>
+          </div>
+          <img
+            src={image}
+            alt={`feedback-by-${name}`}
+            className="w-10 h-10 rounded-full object-cover"
+          />
         </div>
       </div>
-
-   
     </motion.div>
-)
+  );
+};
 
 const Feedbacks = () => {
-  return (
-    <div className='mt-12 bg-black-100 rounded-[20px]'>
-    <div className={`${styles.padding}
-    bg-tertiary rounded-2xl min-h-[300px]
-    `}>
-      <motion.div className={`${styles.padding}
-      bg-tertiary rounded-2xl min-h-[300px]`}>
-        <p className={styles.sectionSubText}>What others say</p>
-        <h2 className={styles.sectionHeadText}>Recommendations.</h2>
-      </motion.div>
-    </div>
-    <div className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7`}>
-      {testimonials.map((testimonial, index) => (
-        <FeedBackCard 
-          key={testimonial.name}
-          index={index}
-          {...testimonial}
-        />
-      ))}
-    </div>
-    </div>
-  )
-}
+  const { t } = useTranslation();
 
-export default SectionWrapper(Feedbacks, '');
+  return (
+    <div className="mt-12 bg-black-100 rounded-[20px]">
+      <div
+        className={`${styles.padding}
+    bg-tertiary rounded-2xl min-h-[300px]
+    `}
+      >
+        <motion.div
+          className={`${styles.padding}
+      bg-tertiary rounded-2xl min-h-[300px]`}
+        >
+          <p className={styles.sectionSubText}>
+            {t("sections.testimonialsSubtitle")}
+          </p>
+          <h2 className={styles.sectionHeadText}>
+            {t("sections.testimonialsTitle")}
+          </h2>
+        </motion.div>
+      </div>
+      <div className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7`}>
+        {testimonials.map((testimonial, index) => (
+          <FeedBackCard key={testimonial.name} index={index} {...testimonial} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default SectionWrapper(Feedbacks, "");
