@@ -33,10 +33,10 @@ const Navbar = () => {
           />
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
             {t("header.title")} &nbsp;
-            <span className="sm:block hidden">| {t("header.subtitle")}</span>
+            <span className="md:block hidden">| {t("header.subtitle")}</span>
           </p>
         </Link>
-        <ul className="list-non hidden sm:flex flex-row gap-10">
+        <ul className="list-non hidden md:flex flex-row gap-10">
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -49,10 +49,10 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div className="hidden sm:block">
+        <div className="hidden md:block">
           <LanguageSwitcher />
         </div>
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="md:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
             alt="menu"

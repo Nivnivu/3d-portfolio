@@ -214,7 +214,7 @@ const resources = {
       nav: {
         about: "אודות",
         certificates: "תעודות",
-        work: "עבודה",
+        work: "עבודות",
         contact: "צור קשר",
         projects: "פרויקטים",
         experience: "ניסיון",
@@ -222,49 +222,50 @@ const resources = {
       // Header - Hebrew
       header: {
         title: "ניב",
-        subtitle: "מפתח אתרים",
+        subtitle: "מפתח ווב",
       },
       // Hero - Hebrew
       hero: {
         greeting: "היי, אני",
         name: "ניב",
-        description: "אני מפתח אפליקציות חזית, שרת ומובייל מקצועיות",
-        descriptionLine2: "כמו גם בוטים שונים, כלי גריפה ואוטומציה.",
+        description:
+          "בן 29 מתמחה בפיתוח יישומי פרונטאנד, בקאנד ומובייל מקצועיים,",
+        descriptionLine2: "וכן בוטים, כלי Scraping ופתרונות אוטומציה מתקדמים.",
       },
       // Services - Hebrew
       services: {
-        frontend: "מפתח חזית",
-        backend: "מפתח שרת",
+        frontend: "מפתח פרונטאנד",
+        backend: "מפתח בקאנד",
         bots: "מפתח בוטים ואוטומציה",
-        mobile: "מפתח אפליקציות נייד",
+        mobile: "מפתח מובייל",
       },
       // Technologies - Hebrew
       technologies: {
         html: "HTML 5",
         css: "CSS 3",
-        javascript: "ג'אווה סקריפט",
-        typescript: "טייפ סקריפט",
-        python: "פייתון",
-        react: "ריאקט JS",
+        javascript: "JavaScript",
+        typescript: "TypeScript",
+        python: "Python",
+        react: "React JS",
         redux: "Redux Toolkit",
         tailwind: "Tailwind CSS",
         nodejs: "Node JS",
         mongodb: "MongoDB",
         threejs: "Three JS",
-        git: "git",
+        git: "Git",
       },
       // Experience - Hebrew
       experience: {
-        current: "היום",
-        botsTitle: "יוצר בוטים ואוטומציה",
+        current: "נוכחי",
+        botsTitle: "מפתח בוטים ואוטומציה",
         botsCompany: "Bots4All",
-        botsDate: "דצמבר 2023 - היום",
+        botsDate: "דצמבר 2023 - נוכחי",
         botsPoints: [
           "כפרילנסר המתמחה באוטומציה אני יוצר בוטים מתקדמים לטלגרם, וואטסאפ, בינאנס ועוד.",
           "המומחיות שלי כוללת פיתוח בוטי גריפה מותאמים ופתרונות אוטומציה שונים,",
           "יעול יעיל של משימות דיגיטליות לצרכים מגוונים.",
         ],
-        fullStackTitle: "מתמחה פול-סטאק",
+        fullStackTitle: "מתמחה Full-Stack",
         zipyCompany: "Zipy",
         zipyDate: "ינואר 2023 - דצמבר 2023",
         zipyPoints: [
@@ -273,8 +274,8 @@ const resources = {
           "למידה מהטובים ביותר, על שיטות עבודה מתקדמות הקשורות לתכנות ופריימוורקים וספריות חדשות יותר",
           "חשיבה על יעילות של צד השרת וצד הלקוח.",
         ],
-        studentTitle: "סטודנט פול-סטאק",
-        svCompany: "מכללת אס-וי",
+        studentTitle: "סטודנט Full-Stack",
+        svCompany: "מכללת SV",
         svDate: "יוני 2022 - ינואר 2023",
         svPoints: [
           "כיוון שרציתי לקבל בסיס חזק יותר בריאקט,",
@@ -294,10 +295,10 @@ const resources = {
         courseraCompany: "Udemy/Coursera",
         selfTaughtDate2: "מרץ 2021 - אפריל 2022",
         selfTaughtPoints2: [
-          "התחלתי ללמוד מתמטיקה הקשורה לאנליטיקת נתונים ומדעי המחשב,",
-          "נושאים כמו- אלגברה לינארית, מתמטיקה דיסקרטית, חשבון אינפיניטסימלי, הסתברות וסטטיסטיקה.",
-          "מתמטיקה נתנה לי הבנה טובה של מושגים המשמשים בתכנות.",
-          "עם הבסיס הזה התחלתי ללמוד פייתון, מבני נתונים ומניפולציית נתונים.",
+          "לימוד מעמיק של מתמטיקה הנדרשת למדעי המחשב ואנליזת נתונים.",
+          "התמחות בנושאים כגון אלגברה לינארית, מתמטיקה דיסקרטית, חשבון אינפיניטסימלי, הסתברות וסטטיסטיקה.",
+          "לימודי המתמטיקה העניקו בסיס אנליטי איתן להבנת מושגי יסוד בתכנות ואלגוריתמיקה.",
+          "על בסיס זה, התחלתי ללמוד Python, תוך התמקדות במבני נתונים, מניפולציית נתונים, ועקרונות תכנות מונחה עצמים.",
         ],
       },
       // Testimonials - Hebrew
@@ -323,41 +324,44 @@ const resources = {
       ],
       // Projects - Hebrew
       projects: {
-        stealthTitle: "מחלץ טלגרם חמקמק",
+        stealthTitle: "Stealth Telegram Extractor",
         stealthDesc:
-          "כלי זה הוא גורד טלגרם יעיל ביותר המסוגל לחלץ נתונים מקבוצות פרטיות וסגורות ללא זיהוי. הוא מתוכנן למנוע חסימות ואסימות, מה שמבטיח פעולה רציפה ואמינות. אידיאלי למשתמשים הזקוקים לתובנות עמוקות מערוצי הטלגרם הבלעדיים מבלי להתפשר על מהירות או שלמות נתונים.",
-        crossPlatformTitle: "מפיץ רב-פלטפורמי",
+          "כלי Scraping מתקדם ב-Python לחילוץ נתונים מקבוצות טלגרם פרטיות וסגורות, תוך עקיפת מנגנוני חסימה וניהול Sessions. הפרויקט מדגים יכולות עבודה עם APIs, תקשורת רשת א-סינכרונית, והתמודדות עם אתגרי אבטחה דינמיים.",
+        crossPlatformTitle: "Cross-Platform Dispatcher",
         crossPlatformDesc:
-          "מפיץ רב-פלטפורמי הוא API המעביר הודעות מיידית מערוץ טלגרם לפייסבוק, וואטסאפ ו-X (הטוויטר החדש). כלי זה מפשט מעורבות רב-פלטפורמית, מבטיח הפצה אחידה של הודעות ברשתות חברתיות מרכזיות, משפר הגעה וקישוריות בקלות. אידיאלי לאסטרטגיות תקשורת דיגיטלית חלקה.",
-        disneyTitle: "שיבוט דיסני+",
+          "API מבוסס Node.js המאפשר הפצת הודעות בזמן אמת מערוץ טלגרם למספר רשתות חברתיות במקביל (Facebook, WhatsApp, X). הפרויקט מדגים ארכיטקטורת Microservice, ניהול תורים, ואינטגרציה עם APIs של צד-שלישי.",
+        disneyTitle: "Disney+ Clone",
         disneyDesc:
-          "שיבוט דיסני+ עם פונקציות CRUD API. ניסוי ב-GQL מסד הנתונים המהיר ביותר",
-        whatsappTitle: "וואטסאפ-GPT",
+          "יישום Full-Stack של שיבוט Disney+, הכולל ממשק משתמש רספונסיבי ב-React ו-API מבוסס GraphQL לביצוע פעולות CRUD מול מסד נתונים MongoDB. הפרויקט מדגים ארכיטקטורת שרת-לקוח מודרנית ושליטה בטכנולוגיות צד-לקוח וצד-שרת.",
+        whatsappTitle: "WhatsApp-GPT",
         whatsappDesc:
-          "באמצעות OpenAI API ו-Whatsapp.web.js אני יכול לכוונן תגובה מ-chatgpt ולדבר איתו בשיחת וואטסאפ.",
-        cryptoTitle: "תחזיות קריפטו",
+          "אינטגרציה בין OpenAI API לספריית whatsapp-web.js ליצירת צ'אטבוט חכם על גבי WhatsApp, עם יכולת להתאים ולכוונן את תגובות המודל.",
+        cryptoTitle: "Crypto Predictions",
         cryptoDesc:
-          "גריפה, מניפולציה, סידור ויצירת סטטיסטיקות על מטבעות קריפטו מובילים.",
-        portfolioTitle: "תיק העבודות הראשון",
-        portfolioDesc: "תיק העבודות הראשון שלי אי פעם",
+          "פרויקט Data Science ב-Python הכולל איסוף (Scraping), עיבוד, וניתוח סטטיסטי של נתונים על מטבעות קריפטו מובילים, במטרה לזהות מגמות.",
+        portfolioTitle: "פורטפוליו ראשון",
+        portfolioDesc:
+          "הגרסה הראשונה של תיק העבודות שלי, שנבנתה עם HTML, CSS ו-JavaScript ונילה.",
         pacmanTitle: "משחק פק-מן",
-        pacmanDesc: "גרסה נהדרת ופשוטה של פק-מן עשויה עם הבסיס",
-        movieTitle: "ארץ הסרטים",
+        pacmanDesc:
+          "יישום של משחק הארקייד הקלאסי פק-מן באמצעות JavaScript, HTML Canvas ו-CSS.",
+        movieTitle: "MovieLand",
         movieDesc:
-          "אפליקציית API המחוברת ל-API של סרטים, מספקת נתונים לכל סרט מסחרי.",
+          "אפליקציית React המתחברת ל-API חיצוני (OMDb) כדי להציג מידע על סרטים, תוך יישום של חיפוש וסינון דינמי.",
         pongTitle: "משחק פונג",
-        pongDesc: "פונג טוב מהבית הספר הישן",
+        pongDesc:
+          "גרסת רטרו למשחק פונג הקלאסי, פותחה באמצעות JavaScript בסיסי לתרגול מניפולציה של ה-DOM.",
       },
       // Certificates - Hebrew
       certificates: {
-        fullStack: "פיתוח פול-סטאק",
-        bootcamp: "בוטקמפ פול-סטאק",
-        python: "פייתון לכולם עם הצטיינות",
+        fullStack: "פיתוח Full-Stack",
+        bootcamp: "בוטקמפ Full-Stack",
+        python: "Python לכולם בהצטיינות",
         dataScience: "כישורי מתמטיקה למדעי הנתונים",
-        webDesign: "עיצוב אתרים רספונסיבי",
+        webDesign: "עיצוב ווב רספונסיבי",
         selfPy: "Self.py",
-        pythonCert: "פייתון",
-        webDev: "פיתוח אתרים",
+        pythonCert: "Python",
+        webDev: "פיתוח ווב",
         sql: "SQL",
       },
       // Section headers and common UI - Hebrew
@@ -366,22 +370,22 @@ const resources = {
         aboutSubtitle: "היכרות",
         aboutTitle: "סקירה כללית.",
         aboutDescription:
-          "התשוקה שלי לפיתוח התחילה בגיל שמונה, כשהתעסקתי עם HTML ו-CSS ליצירת חתימות מותאמות אישית לפורומים. הסקרנות המוקדמת הזו צמחה במהירות, והוביל אותי לבנות את האתר הראשון שלי בגיל תשע ולפתח תוספי WordPress מותאמים אישית עם PHP כנער. בארבע השנים האחרונות, תיעלתי את התשוקה הזו לקריירה מקצועית בפול-סטאק. שיפרתי את הכישורים שלי ב-Zipy, פלטפורמת e-commerce גלובלית, לפני שעברתי ל-bots4all ו-apps4all, שם תכננתי כלי אוטומציה ובניתי אפליקציות אינטרנט ומובייל מלאות באמצעות טכנולוגיות מודרניות כמו Next.js, TypeScript ו-React Native. המומחיות העמוקה שלי הן בפייתון והן בג'אווהסקריפט מאפשרת לי לספק פתרונות רב-תכליתיים וחזקים.",
+          "התשוקה שלי לפיתוח החלה בגיל שמונה, כששיחקתי עם HTML ו-CSS ליצירת חתימות מותאמות אישית לפורומים. סקרנות מוקדמת זו גדלה במהירות, והובילה אותי לבנות את אתר הכיתה הראשון שלי בגיל תשע ולפתח תוספי וורדפרס מותאמים אישית עם PHP כנער. בארבע השנים האחרונות, תיעלתי את התשוקה הזו לקריירת Full-Stack מקצועית. חידדתי את כישוריי ב-Zipy, פלטפורמת מסחר אלקטרוני גלובלית, לפני שעברתי ל-bots4all ו-apps4all, שם תכננתי כלי אוטומציה ובניתי יישומי ווב ומובייל מלאים באמצעות טכנולוגיות מודרניות כמו Next.js, TypeScript ו-React Native. המומחיות העמוקה שלי הן ב-Python והן ב-JavaScript מאפשרת לי לספק פתרונות רב-תכליתיים וחזקים.",
 
         // Experience section - Hebrew
         experienceSubtitle: "מה עשיתי עד כה",
         experienceTitle: "ניסיון תעסוקתי.",
 
         // Projects section - Hebrew
-        projectsSubtitle: "העבודה שלי",
+        projectsSubtitle: "העבודות שלי",
         projectsTitle: "פרויקטים.",
         projectsDescription:
-          "הפרויקטים הבאים מציגים את הכישורים והניסיון שלי דרך דוגמאות מהעולם האמיתי של העבודה שלי. כל פרויקט מתואר בקצרה עם קישורים למאגרי קוד וחלק כוללים הדגמות חיות בו. זה משקף את היכולת שלי לפתור בעיות מורכבות, לעבוד עם טכנולוגיות שונות ולנהל פרויקטים ביעילות.",
+          "הפרויקטים הבאים מציגים את כישוריי וניסיוני באמצעות דוגמאות מהעולם האמיתי של עבודתי. כל פרויקט מתואר בקצרה עם קישורים למאגרי קוד, וחלקם כוללים הדגמות חיות. הפורטפוליו משקף את יכולתי לפתור בעיות מורכבות, לעבוד עם טכנולוגיות שונות, ולנהל פרויקטים ביעילות.",
 
         // Certificates section - Hebrew
-        certificatesSubtitle: "הלימודים שלי",
+        certificatesSubtitle: "הכשרה והסמכות",
         certificatesTitle: "תעודות.",
-        certificatesVerify: "לחץ לאימות",
+        certificatesVerify: "לצפייה בתעודה",
 
         // Testimonials section - Hebrew
         testimonialsSubtitle: "מה אחרים אומרים",
@@ -389,15 +393,15 @@ const resources = {
         fullRecommendation: "המלצה חתומה מלאה",
 
         // Contact section - Hebrew
-        contactSubtitle: "צור קשר",
+        contactSubtitle: "בואו נדבר",
         contactTitle: "יצירת קשר.",
-        contactName: "השם שלך",
-        contactEmail: "האימייל שלך",
-        contactMessage: "ההודעה שלך",
-        contactSend: "שלח",
+        contactName: "שם מלא",
+        contactEmail: "כתובת אימייל",
+        contactMessage: "תוכן ההודעה",
+        contactSend: "שליחה",
         contactSending: "שולח...",
         contactThankYou: "תודה. אחזור אליך בהקדם האפשרי.",
-        contactError: "אה, משהו השתבש. אנא נסה שוב.",
+        contactError: "אופס, משהו השתבש. אנא נסה שוב.",
       },
 
       // Common - Hebrew
