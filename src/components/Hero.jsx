@@ -1,34 +1,10 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { useState, useEffect } from "react";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
   const { t } = useTranslation();
-  const [showCanvas, setShowCanvas] = useState(true);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    // Detect mobile device
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
-    setIsMobile(mediaQuery.matches);
-
-    const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches);
-    };
-
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
-    return () =>
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
-  }, []);
-
-  // Fallback component for when 3D fails
-  const CanvasFallback = () => (
-    <div className="absolute inset-0 flex justify-center items-center">
-      <div className="w-60 h-60 bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 rounded-full opacity-30 animate-pulse"></div>
-    </div>
-  );
 
   return (
     <section className={`relative w-full h-screen mx-auto`}>
@@ -53,20 +29,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Conditional rendering of 3D canvas with error boundary */}
-      {showCanvas ? (
-        <div
-          onError={() => setShowCanvas(false)}
-          style={{
-            willChange: isMobile ? "auto" : "transform",
-            backfaceVisibility: "hidden",
-          }}
-        >
-          <ComputersCanvas />
-        </div>
-      ) : (
-        <CanvasFallback />
-      )}
+      <ComputersCanvas />
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
