@@ -8,9 +8,9 @@ const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
 
   // More aggressive mobile optimizations
-  const hemisphereIntensity = isMobile ? 0.08 : 0.15;
-  const spotLightIntensity = isMobile ? 0.5 : 1;
-  const pointLightIntensity = isMobile ? 0.5 : 1;
+  const hemisphereIntensity = isMobile ? 0.09 : 0.15;
+  const spotLightIntensity = isMobile ? 0.6 : 1;
+  const pointLightIntensity = isMobile ? 0.6 : 1;
 
   return (
     <mesh>

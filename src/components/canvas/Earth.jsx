@@ -23,7 +23,7 @@ const Earth = () => {
   }, []);
 
   // Slightly smaller scale on mobile (10% reduction)
-  const scale = isMobile ? 2.25 : 2.5;
+  const scale = isMobile ? 2.1 : 2.5;
 
   return (
     <primitive
