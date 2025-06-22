@@ -36,12 +36,31 @@ const Earth = () => {
 };
 
 const EarthCanvas = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    setIsMobile(mediaQuery.matches);
+
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+    return () =>
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+  }, []);
+
   return (
     <Canvas
-      shadows
+      shadows={!isMobile}
       frameloop="demand"
-      dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
+      dpr={isMobile ? [0.75, 1] : [1, 2]}
+      gl={{
+        preserveDrawingBuffer: true,
+        antialias: !isMobile,
+        powerPreference: isMobile ? "low-power" : "high-performance",
+      }}
       camera={{
         fov: 45,
         near: 0.1,
@@ -55,6 +74,7 @@ const EarthCanvas = () => {
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
+          enableDamping={!isMobile}
         />
         <Earth />
 

@@ -8,9 +8,9 @@ const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
 
   // More aggressive mobile optimizations
-  const hemisphereIntensity = isMobile ? 0.09 : 0.15;
-  const spotLightIntensity = isMobile ? 0.6 : 1;
-  const pointLightIntensity = isMobile ? 0.6 : 1;
+  const hemisphereIntensity = isMobile ? 0.12 : 0.15;
+  const spotLightIntensity = isMobile ? 0.8 : 1;
+  const pointLightIntensity = isMobile ? 0.8 : 1;
 
   return (
     <mesh>
@@ -21,13 +21,13 @@ const Computers = ({ isMobile }) => {
         angle={0.12}
         penumbra={1}
         intensity={spotLightIntensity}
-        castShadow={!isMobile} // Disable shadows on mobile
+        castShadow={!isMobile} // Keep shadows disabled on mobile for performance
         shadow-mapSize={isMobile ? 512 : 1024} // Reduce shadow map size
       />
       <pointLight intensity={pointLightIntensity} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.6 : 0.75} // Even smaller on mobile
+        scale={isMobile ? 0.65 : 0.75} // Slightly larger on mobile
         position={isMobile ? [0, -3, -2.5] : [0, -3.25, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
@@ -78,7 +78,7 @@ const ComputersCanvas = () => {
     <Canvas
       frameloop="demand"
       shadows={!isMobile} // Disable shadows completely on mobile
-      dpr={isMobile ? [0.5, 1] : [1, 2]} // Much lower DPR on mobile
+      dpr={isMobile ? [0.75, 1.25] : [1, 2]} // Improved DPR on mobile
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{
         preserveDrawingBuffer: true,

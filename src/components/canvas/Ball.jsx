@@ -28,15 +28,15 @@ const Ball = (props) => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
   }, []);
 
-  // Reduce geometry complexity on mobile (20% reduction)
-  const geometryArgs = isMobile ? [1, 0] : [1, 1];
-  const lightIntensity = isMobile ? 0.2 : 0.25;
+  // Reduce geometry complexity on mobile (more aggressive - 40% reduction)
+  const geometryArgs = isMobile ? [0.8, 0] : [1, 1];
+  const lightIntensity = isMobile ? 0.15 : 0.25;
 
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
       <ambientLight intensity={lightIntensity} />
       <directionalLight position={[0, 0, 0.05]} />
-      <mesh castShadow receiveShadow scale={2.75}>
+      <mesh castShadow receiveShadow scale={isMobile ? 2.5 : 2.75}>
         <icosahedronGeometry args={geometryArgs} />
         <meshStandardMaterial
           color="#fff8eb"
@@ -57,11 +57,30 @@ const Ball = (props) => {
 };
 
 const BallCanvas = ({ icon }) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    setIsMobile(mediaQuery.matches);
+
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+    return () =>
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+  }, []);
+
   return (
     <Canvas
       frameloop="demand"
-      dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
+      dpr={isMobile ? [0.75, 1] : [1, 2]} // Lower DPR on mobile
+      gl={{
+        preserveDrawingBuffer: true,
+        antialias: !isMobile, // Disable antialiasing on mobile
+        powerPreference: isMobile ? "low-power" : "high-performance",
+      }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />
