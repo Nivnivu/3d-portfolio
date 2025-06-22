@@ -5,7 +5,7 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { certificates } from "../constants";
 
-const ProjectCard = ({ index, name, image, verifyLink }) => {
+const ProjectCard = ({ index, name, titleKey, image, verifyLink }) => {
   const { t } = useTranslation();
 
   return (
@@ -28,7 +28,7 @@ const ProjectCard = ({ index, name, image, verifyLink }) => {
           </div>
           <div className="mt-5">
             <h3 className="text-white font-bold text-[24px]">
-              {t(`certificates.${name}`) || name}
+              {titleKey ? t(titleKey) : name}
             </h3>
             <p>{t("sections.certificatesVerify")}</p>
           </div>
@@ -53,8 +53,12 @@ const Certificates = () => {
       </div>
       <div className="w-full flex"></div>
       <div className="mt-20 flex flex-wrap gap-7 items-center justify-center">
-        {certificates.map((certifacte, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...certifacte} />
+        {certificates.map((certificate, index) => (
+          <ProjectCard
+            key={`project-${index}`}
+            index={index}
+            {...certificate}
+          />
         ))}
       </div>
     </>

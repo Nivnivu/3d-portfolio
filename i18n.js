@@ -18,7 +18,7 @@ const resources = {
       // Header
       header: {
         title: "Niv",
-        subtitle: "Web Developer",
+        subtitle: "Full-Stack Developer",
       },
       // Hero
       hero: {
@@ -222,7 +222,7 @@ const resources = {
       // Header - Hebrew
       header: {
         title: "ניב",
-        subtitle: "מפתח ווב",
+        subtitle: "מפתח Full-Stack",
       },
       // Hero - Hebrew
       hero: {

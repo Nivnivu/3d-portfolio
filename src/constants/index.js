@@ -41,7 +41,6 @@ import {
   bots,
   stealthTelegram,
   cross_platform,
-  php,
 } from "../assets";
 
 export const navLinks = [
@@ -84,9 +83,9 @@ const services = [
     titleKey: "services.bots",
   },
   {
-    title: "Technology Solution Archyitect",
+    title: "Mobile Developer",
     icon: creator,
-    titleKey: "services.technology",
+    titleKey: "services.mobile",
   },
 ];
 
@@ -138,10 +137,6 @@ const technologies = [
   {
     name: "git",
     icon: git,
-  },
-  {
-    name: "PHP",
-    icon: php,
   },
 ];
 
@@ -455,53 +450,62 @@ const projects = [
 const certificates = [
   {
     name: "Full-Stack Development",
+    titleKey: "certificates.fullStack",
     image: svCertificate,
     verifyLink: "https://www.nivbarsh.com/assets/svc-8afcecef.png",
   },
   {
     name: "Full-Stack Bootcamp",
+    titleKey: "certificates.bootcamp",
     image: udemyStack,
     verifyLink:
       "https://www.udemy.com/certificate/UC-008e28ba-d63b-4585-bd93-ad8f8c99f27a/",
   },
   {
     name: "Python For Everybody with honor",
+    titleKey: "certificates.python",
     image: pythonCoursera,
     verifyLink:
       "https://www.coursera.org/account/accomplishments/verify/L4CY4QXLX2QC",
   },
   {
     name: "Data Science Math Skills",
+    titleKey: "certificates.dataScience",
     image: duke,
     verifyLink:
       "https://www.coursera.org/account/accomplishments/verify/Q7SUGZUMYWET",
   },
   {
     name: "Responsive Web Design",
+    titleKey: "certificates.webDesign",
     image: freecode,
     verifyLink:
       "https://www.freecodecamp.org/certification/Nivbarsh/responsive-web-design",
   },
   {
     name: "Self.py",
+    titleKey: "certificates.selfPy",
     image: campus,
     verifyLink:
       "https://courses.campus.gov.il/certificates/30472d809b114cf8b8115b202412ee82",
   },
   {
     name: "Python",
+    titleKey: "certificates.pythonCert",
     image: mimoWeb,
     verifyLink:
       "https://nivnivu.github.io/personal-portfolio/static/media/mimo.5a743441184fb17644e5.JPG",
   },
   {
     name: "Web Development",
+    titleKey: "certificates.webDev",
     image: mimo1,
     verifyLink:
       "https://nivnivu.github.io/personal-portfolio/static/media/mimo-web.0d53f55ab726acf01184.JPG",
   },
   {
     name: "SQL",
+    titleKey: "certificates.sql",
     image: mimoSql,
     verifyLink:
       "https://nivnivu.github.io/personal-portfolio/static/media/mimo-sql.136aa7edc11cece06b3f.JPG",
