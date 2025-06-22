@@ -41,6 +41,7 @@ import {
   bots,
   stealthTelegram,
   cross_platform,
+  php,
 } from "../assets";
 
 export const navLinks = [
@@ -68,20 +69,24 @@ export const navLinks = [
 
 const services = [
   {
-    titleKey: "services.frontend",
+    title: "Frontend developer",
     icon: web,
+    titleKey: "services.frontend",
   },
   {
-    titleKey: "services.backend",
+    title: "Backend Developer",
     icon: mobile,
+    titleKey: "services.backend",
   },
   {
-    titleKey: "services.bots",
+    title: "Bots & Automation Developer",
     icon: backend,
+    titleKey: "services.bots",
   },
   {
-    titleKey: "services.mobile",
+    title: "Technology Solution Archyitect",
     icon: creator,
+    titleKey: "services.technology",
   },
 ];
 
@@ -133,6 +138,10 @@ const technologies = [
   {
     name: "git",
     icon: git,
+  },
+  {
+    name: "PHP",
+    icon: php,
   },
 ];
 

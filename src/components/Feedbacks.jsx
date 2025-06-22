@@ -18,16 +18,25 @@ const FeedBackCard = ({
 }) => {
   const { t } = useTranslation();
 
-  const getTestimonialKey = (testimonialName) => {
-    const keyMap = {
-      "Lior Ben Shimon": "lior",
-      "Ben Levy": "ben",
-      "Dima Lazar": "dima",
+  // Get translated testimonials array
+  const translatedTestimonials = t("testimonials", { returnObjects: true });
+
+  // Find the matching testimonial by name or use index as fallback
+  const getTestimonialByName = (name) => {
+    // Map the original names to the array indices
+    const nameToIndex = {
+      "Yaniv Almog": 0,
+      Yura: 1,
+      Dima: 2,
     };
-    return keyMap[testimonialName];
+
+    const testimonialIndex = nameToIndex[name];
+    return testimonialIndex !== undefined
+      ? translatedTestimonials[testimonialIndex]
+      : null;
   };
 
-  const testimonialKey = getTestimonialKey(name);
+  const translatedTestimonial = getTestimonialByName(name);
 
   return (
     <motion.div
@@ -38,9 +47,7 @@ const FeedBackCard = ({
 
       <div className="mt-1">
         <p className="text-white tracking-wider text-[18x]">
-          {testimonialKey
-            ? t(`testimonials.${testimonialKey}Text`)
-            : testimonial}
+          {translatedTestimonial ? translatedTestimonial.text : testimonial}
         </p>
         <br />
         <a
@@ -54,16 +61,14 @@ const FeedBackCard = ({
           <div className="flex-1 flex flex-col">
             <p className="text-white font-medium text-[16px]">
               <span className="blue-text-gradient">@</span>{" "}
-              {testimonialKey ? t(`testimonials.${testimonialKey}Name`) : name}
+              {translatedTestimonial ? translatedTestimonial.name : name}
             </p>
             <p className="mt-1 text-secondary text-[12px]">
-              {testimonialKey
-                ? t(`testimonials.${testimonialKey}Designation`)
+              {translatedTestimonial
+                ? translatedTestimonial.designation
                 : designation}{" "}
               of{" "}
-              {testimonialKey
-                ? t(`testimonials.${testimonialKey}Company`)
-                : company}
+              {translatedTestimonial ? translatedTestimonial.company : company}
             </p>
           </div>
           <img

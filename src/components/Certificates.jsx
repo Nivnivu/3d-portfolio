@@ -52,7 +52,7 @@ const Certificates = () => {
         </h2>
       </div>
       <div className="w-full flex"></div>
-      <div className="mt-20 flex flex-wrap gap-7">
+      <div className="mt-20 flex flex-wrap gap-7 items-center justify-center">
         {certificates.map((certifacte, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...certifacte} />
         ))}

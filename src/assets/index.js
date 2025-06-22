@@ -10,7 +10,7 @@ import close from "./close.svg";
 import css from "./tech/css.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
-import python from './tech/python.png'
+import python from "./tech/python.png";
 import javascript from "./tech/javascript.png";
 import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
@@ -19,40 +19,42 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import php from "./tech/php.png";
 
-import bots from './company/bots.png'
-import sv from './company/sv.png'
-import zipy from './company/zipy.png'
-import coursera from './company/coursera.png'
-import udemy from './company/udemy.png'
+import bots from "./company/bots.png";
+import sv from "./company/sv.png";
+import zipy from "./company/zipy.png";
+import coursera from "./company/coursera.png";
+import udemy from "./company/udemy.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
-import pong from './pong.png'
-import firstPort from './firstPortfolio.png'
-import gptWhatsapp from './gpt-whatsapp.png'
+import pong from "./pong.png";
+import firstPort from "./firstPortfolio.png";
+import gptWhatsapp from "./gpt-whatsapp.png";
 
-import disney from './disney.png'
-import cross_platform from './cross_platform.png'
+import disney from "./disney.png";
+import cross_platform from "./cross_platform.png";
 
-import udemyStack from './certi/udemy.png'
-import pythonCoursera from './certi/pythoncoursera.png'
-import freecode from './certi/htmlcssfreecodecamp.png'
-import duke from './certi/duke1.png'
-import campus from './certi/campus.png'
-import mimoWeb from './certi/mimo.png'
-import mimo1 from './certi/mimo-web.png'
-import mimoSql from './certi/mimo-sql.png'
-import svCertificate from './certi/svc.png'
+import udemyStack from "./certi/udemy.png";
+import pythonCoursera from "./certi/pythoncoursera.png";
+import freecode from "./certi/htmlcssfreecodecamp.png";
+import duke from "./certi/duke1.png";
+import campus from "./certi/campus.png";
+import mimoWeb from "./certi/mimo.png";
+import mimo1 from "./certi/mimo-web.png";
+import mimoSql from "./certi/mimo-sql.png";
+import svCertificate from "./certi/svc.png";
 
-import svReco from './reco/sv-recomand.pdf'
-import zipyReco from './reco/Zipy-recomandation.pdf'
+import svReco from "./reco/sv-recomand.pdf";
+import zipyReco from "./reco/Zipy-recomandation.pdf";
 
-import dimaPic from './dimas.png'
-import modernLogo from './modern_logo.png'
-import stealthTelegram from './stealth_telegram.png'
+import dimaPic from "./dimas.png";
+import modernLogo from "./modern_logo.png";
+import stealthTelegram from "./stealth_telegram.png";
 
 export {
+  php,
   stealthTelegram,
   cross_platform,
   modernLogo,
@@ -99,5 +101,5 @@ export {
   campus,
   mimoWeb,
   mimo1,
-  mimoSql
+  mimoSql,
 };

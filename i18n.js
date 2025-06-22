@@ -25,7 +25,7 @@ const resources = {
         greeting: "Hey, I am",
         name: "Niv",
         description:
-          "I develop professional frontend, backend and mobile applications",
+          "29 years old, I develop professional frontend, backend and mobile applications",
         descriptionLine2:
           "As well as various bots, scraping and automation tools.",
       },

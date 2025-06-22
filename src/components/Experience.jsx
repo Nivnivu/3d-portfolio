@@ -14,56 +14,82 @@ import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
 const ExperienceCard = ({ experience }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isHebrew = i18n.language === "he";
 
   const getTitleKey = (title) => {
     const keyMap = {
-      "AI & Data Analyst": "botsTitle",
-      "Full stack Developer": "zipyTitle",
-      "Mentor & Teacher": "svTitle",
-      Instructor: "udemyTitle",
-      "Data Science Student": "courseraTitle",
+      "Bots and Automation creator": "botsTitle",
+      "Full-Stack intern": "fullStackTitle",
+      "Full-Stack Student": "studentTitle",
+      "Self taught student": "selfTaughtTitle",
     };
     return keyMap[title];
   };
 
   const getCompanyKey = (company) => {
     const keyMap = {
-      Bots4all: "botsCompany",
+      Bots4All: "botsCompany",
       Zipy: "zipyCompany",
       "Sv-college": "svCompany",
-      Udemy: "udemyCompany",
-      Coursera: "courseraCompany",
+      "Udemy/Coursera": "udemyCompany",
     };
     return keyMap[company];
   };
 
-  const getDateKey = (title) => {
+  const getDateKey = (title, company, date) => {
+    // Handle the two different "Self taught student" entries
+    if (title === "Self taught student") {
+      if (date.includes("April 2022 - July 2023")) {
+        return "selfTaughtDate1";
+      } else if (date.includes("March 2021 - April 2022")) {
+        return "selfTaughtDate2";
+      }
+    }
+
     const keyMap = {
-      "AI & Data Analyst": "botsDate",
-      "Full stack Developer": "zipyDate",
-      "Mentor & Teacher": "svDate",
-      Instructor: "udemyDate",
-      "Data Science Student": "courseraDate",
+      "Bots and Automation creator": "botsDate",
+      "Full-Stack intern": "zipyDate",
+      "Full-Stack Student": "svDate",
     };
     return keyMap[title];
   };
 
-  const getPointsKey = (title) => {
+  const getPointsKey = (title, company, date) => {
+    // Handle the two different "Self taught student" entries
+    if (title === "Self taught student") {
+      if (date.includes("April 2022 - July 2023")) {
+        return "selfTaughtPoints1";
+      } else if (date.includes("March 2021 - April 2022")) {
+        return "selfTaughtPoints2";
+      }
+    }
+
     const keyMap = {
-      "AI & Data Analyst": "botsPoints",
-      "Full stack Developer": "zipyPoints",
-      "Mentor & Teacher": "svPoints",
-      Instructor: "udemyPoints",
-      "Data Science Student": "courseraPoints",
+      "Bots and Automation creator": "botsPoints",
+      "Full-Stack intern": "zipyPoints",
+      "Full-Stack Student": "svPoints",
     };
     return keyMap[title];
   };
 
   const titleKey = getTitleKey(experience.title);
   const companyKey = getCompanyKey(experience.company_name);
-  const dateKey = getDateKey(experience.title);
-  const pointsKey = getPointsKey(experience.title);
+  const dateKey = getDateKey(
+    experience.title,
+    experience.company_name,
+    experience.date
+  );
+  const pointsKey = getPointsKey(
+    experience.title,
+    experience.company_name,
+    experience.date
+  );
+
+  // Special handling for the second "Self taught student" entry (Coursera)
+  const isCoursera =
+    experience.title === "Self taught student" &&
+    experience.date.includes("March 2021 - April 2022");
 
   return (
     <VerticalTimelineElement
@@ -84,7 +110,7 @@ const ExperienceCard = ({ experience }) => {
         </div>
       }
     >
-      <div>
+      <div dir={isHebrew ? "rtl" : "ltr"}>
         <h3 className="text-white text-[24px] font-bold">
           {titleKey ? t(`experience.${titleKey}`) : experience.title}
         </h3>
@@ -92,11 +118,18 @@ const ExperienceCard = ({ experience }) => {
           className="text-secondary text-[16px] font-semibold"
           style={{ margin: 0 }}
         >
-          {companyKey ? t(`experience.${companyKey}`) : experience.company_name}
+          {isCoursera
+            ? t("experience.courseraCompany")
+            : companyKey
+            ? t(`experience.${companyKey}`)
+            : experience.company_name}
         </p>
       </div>
 
-      <ul className="mt-5 list-disc ml-5 space-y-2">
+      <ul
+        className={`mt-5 list-disc space-y-2 ${isHebrew ? "mr-5" : "ml-5"}`}
+        dir={isHebrew ? "rtl" : "ltr"}
+      >
         {experience.points.map((point, index) => {
           const translatedPoints = pointsKey
             ? t(`experience.${pointsKey}`, { returnObjects: true })
@@ -109,7 +142,9 @@ const ExperienceCard = ({ experience }) => {
           return (
             <li
               key={`experience-point-${index}`}
-              className="text-white-100 text-[14px] pl-1 tracking-wider"
+              className={`text-white-100 text-[14px] tracking-wider ${
+                isHebrew ? "pr-1" : "pl-1"
+              }`}
             >
               {translatedPoint || point}
             </li>
