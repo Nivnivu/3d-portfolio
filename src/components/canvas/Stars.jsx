@@ -21,16 +21,18 @@ const Stars = (props) => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
   }, []);
 
-  // Reduce star count for mobile devices (30% reduction)
-  const starCount = isMobile ? 2500 : 5000;
+  // Even more aggressive reduction for mobile devices (50% reduction from original)
+  const starCount = isMobile ? 2000 : 5000; // Further reduced from 2500
   const [sphere] = useState(() =>
     random.inSphere(new Float32Array(starCount), { radius: 1.2 })
   );
 
   useFrame((state, delta) => {
     if (ref.current) {
-      ref.current.rotation.x -= delta / 30;
-      ref.current.rotation.y -= delta / 15;
+      // Slower rotation on mobile to reduce processing
+      const rotationSpeed = isMobile ? 40 : 30;
+      ref.current.rotation.x -= delta / rotationSpeed;
+      ref.current.rotation.y -= delta / (rotationSpeed / 2);
     }
   });
 
@@ -40,7 +42,7 @@ const Stars = (props) => {
         <PointMaterial
           transparent
           color="#f272c8"
-          size={isMobile ? 0.0008 : 0.001} // Slightly smaller on mobile
+          size={isMobile ? 0.0006 : 0.001} // Even smaller on mobile
           sizeAttenuation={true}
           depthWrite={false}
         />
@@ -50,9 +52,27 @@ const Stars = (props) => {
 };
 
 const StarsCanvas = () => {
+  const [hasError, setHasError] = useState(false);
+
+  const handleCanvasError = () => {
+    setHasError(true);
+  };
+
+  // If there's an error, don't render anything
+  if (hasError) {
+    return null;
+  }
+
   return (
     <div className="w-full h-auto absolute inset-0 z-[-1]">
-      <Canvas camera={{ position: [0, 0, 1] }}>
+      <Canvas
+        camera={{ position: [0, 0, 1] }}
+        onError={handleCanvasError}
+        gl={{
+          antialias: false, // Disable antialiasing for performance
+          powerPreference: "low-power",
+        }}
+      >
         <Suspense fallback={null}>
           <Stars />
         </Suspense>
