@@ -8,9 +8,9 @@ const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
 
   // More aggressive mobile optimizations
-  const hemisphereIntensity = isMobile ? 0.1 : 0.15;
-  const spotLightIntensity = isMobile ? 0.6 : 1;
-  const pointLightIntensity = isMobile ? 0.6 : 1;
+  const hemisphereIntensity = isMobile ? 0.6 : 0.15;
+  const spotLightIntensity = isMobile ? 0.3 : 1;
+  const pointLightIntensity = isMobile ? 0.3 : 1;
 
   return (
     <mesh>
@@ -22,13 +22,13 @@ const Computers = ({ isMobile }) => {
         penumbra={1}
         intensity={spotLightIntensity}
         castShadow={!isMobile} // Keep shadows disabled on mobile for performance
-        shadow-mapSize={isMobile ? 512 : 1024} // Reduce shadow map size
+        shadow-mapSize={isMobile ? 256 : 1024} // Further reduce shadow map size for mobile
       />
       <pointLight intensity={pointLightIntensity} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.65 : 0.75} // Slightly larger on mobile
-        position={isMobile ? [0, -3, -2.5] : [0, -3.25, -1.5]}
+        scale={isMobile ? 0.45 : 0.75} // Much smaller scale for mobile
+        position={isMobile ? [-1.9, -2.5, -2.2] : [0, -3.25, -1.5]} // Moved left for mobile: x from 1 to -0.8
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -69,7 +69,7 @@ const ComputersCanvas = () => {
   if (hasError || (isMobile && window.innerWidth < 400)) {
     return (
       <div className="flex justify-center items-center h-full">
-        <div className="w-40 h-40 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-50 animate-pulse"></div>
+        <div className="w-32 h-32 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-50 animate-pulse"></div>
       </div>
     );
   }
@@ -78,14 +78,27 @@ const ComputersCanvas = () => {
     <Canvas
       frameloop="demand"
       shadows={!isMobile} // Disable shadows completely on mobile
-      dpr={isMobile ? [0.75, 1.25] : [1, 2]} // Improved DPR on mobile
-      camera={{ position: [20, 3, 5], fov: 25 }}
+      dpr={isMobile ? [0.5, 1] : [1, 2]} // Lower DPR for mobile to improve performance
+      camera={
+        isMobile
+          ? { position: [16, 3, 5], fov: 30 } // Slightly wider FOV for mobile to accommodate smaller model
+          : { position: [20, 3, 5], fov: 25 }
+      }
       gl={{
         preserveDrawingBuffer: true,
         antialias: !isMobile, // Disable antialiasing on mobile
         powerPreference: isMobile ? "low-power" : "high-performance",
+        precision: isMobile ? "lowp" : "highp", // Lower precision for mobile
       }}
       onError={handleCanvasError}
+      style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        pointerEvents: "auto",
+      }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
@@ -93,6 +106,7 @@ const ComputersCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
           enableDamping={!isMobile} // Disable damping on mobile
+          enablePan={false} // Disable panning for better mobile performance
         />
         <Computers isMobile={isMobile} />
       </Suspense>

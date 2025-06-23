@@ -22,7 +22,7 @@ const Stars = (props) => {
   }, []);
 
   // Even more aggressive reduction for mobile devices (50% reduction from original)
-  const starCount = isMobile ? 650 : 5000; // Further reduced to 1200 for better memory management
+  const starCount = isMobile ? 600 : 3500; // Further reduced to 1200 for better memory management
   const [sphere] = useState(() =>
     random.inSphere(new Float32Array(starCount), { radius: 1.2 })
   );
@@ -30,7 +30,7 @@ const Stars = (props) => {
   useFrame((state, delta) => {
     if (ref.current) {
       // Slower rotation on mobile to reduce processing
-      const rotationSpeed = isMobile ? 40 : 30;
+      const rotationSpeed = isMobile ? 45 : 30;
       ref.current.rotation.x -= delta / rotationSpeed;
       ref.current.rotation.y -= delta / (rotationSpeed / 2);
     }
@@ -42,7 +42,7 @@ const Stars = (props) => {
         <PointMaterial
           transparent
           color="#f272c8"
-          size={isMobile ? 0.0006 : 0.001} // Even smaller on mobile
+          size={isMobile ? 0.0008 : 0.001} // Even smaller on mobile
           sizeAttenuation={true}
           depthWrite={false}
         />
