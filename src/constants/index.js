@@ -41,6 +41,7 @@ import {
   bots,
   stealthTelegram,
   cross_platform,
+  apps4all,
 } from "../assets";
 
 export const navLinks = [
@@ -142,68 +143,41 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Bots and Automation creator",
-    company_name: "Bots4All",
-    icon: bots,
-    iconBG: "#E6DEDD",
-    date: "Dec 2023 - Present",
+    title: "Web & Mobile App Developer",
+    company_name: "Apps4All",
+    icon: apps4all,
+    iconBg: "#383E56",
+    date: "2023 - Present",
     points: [
-      "As a freelancer specializing in automation I create advanced bots for Telegram, WhatsApp, Binance, and more.",
-      "My expertise includes developing tailored scraping bots and various automation solutions,",
-      "efficiently streamlining digital tasks for diverse needs.",
+      "Developing comprehensive web and mobile applications using modern tech stacks.",
+      "Building responsive web applications with React, Next.js, and TypeScript.",
+      "Creating cross-platform mobile apps using React Native and Flutter.",
+      "Implementing full-stack solutions with Node.js, MongoDB, and cloud services.",
     ],
   },
-
   {
-    title: "Full-Stack intern",
+    title: "Bots and Automation Developer",
+    company_name: "Bots4All",
+    icon: bots,
+    iconBg: "#E6DEDD",
+    date: "2022 - 2023",
+    points: [
+      "Specialized in automation creating advanced bots for Telegram, WhatsApp, Binance, and more.",
+      "Developed tailored scraping bots and various automation solutions,",
+      "efficiently streamlining digital tasks for diverse client needs.",
+    ],
+  },
+  {
+    title: "Full-Stack Developer",
     company_name: "Zipy",
     icon: zipy,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Dec 2023",
+    date: "2020 - 2022",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Learning from the best, about best practices related to programing and newer framewroks and laiberies",
-      "Thinking about efficency of both server and client side.",
-    ],
-  },
-  {
-    title: "Full-Stack Student",
-    company_name: "Sv-college",
-    icon: sv,
-    iconBg: "#383E56",
-    date: "June 2022 - Jan 2023",
-    points: [
-      "As i wanted to get stronger foundation in react,",
-      "I signed up into a physical college to imporve my skills",
-      "I Got a final grade of 85 points of 100",
-      "With this grade the college sent me to an internship.",
-    ],
-  },
-  {
-    title: "Self taught student",
-    company_name: "Udemy/Coursera",
-    icon: udemy,
-    iconBg: "#E6DEDD",
-    date: "April 2022 - July 2023",
-    points: [
-      "Getting in to Javascript in full power",
-      "Finding the best online courses in full-stack",
-      "Mastering the class and making note and code examples of each lesson.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Self taught student",
-    company_name: "Udemy/Coursera",
-    icon: coursera,
-    iconBg: "#383E56",
-    date: "March 2021 - April 2022",
-    points: [
-      "Iv'e started learning math related to data analytics and computer science,",
-      "Topics like- linear algebra, Discrete mathematics, Calculus, Probabilty and Statistics.",
-      "Math Gave me a good understanding of concepts used in programing.",
-      "With this base i started learning Python, data structures and data manipulation.",
+      "Learning from the best, about best practices related to programing and newer frameworks and libraries",
+      "Thinking about efficiency of both server and client side.",
     ],
   },
 ];
@@ -255,6 +229,142 @@ const tagsColors = {
 
 const projects = [
   {
+    name: "SMAP - Social Network for Sports",
+    description:
+      "SMAP is the ultimate social networking platform for sports enthusiasts, often described as 'the Tinder of sports.' This innovative mobile application connects athletes and sports lovers based on their preferred activities, skill levels, and location. Built with Expo React Native for cross-platform compatibility and styled with NativeWindCSS for a sleek, responsive design.",
+    tags: [
+      {
+        name: "Expo React Native",
+        color: tagsColors.react,
+      },
+      {
+        name: "NativeWindCSS",
+        color: tagsColors.css,
+      },
+      {
+        name: "MongoDB",
+        color: tagsColors.mongo,
+      },
+      {
+        name: "Node.js",
+        color: tagsColors.node,
+      },
+      {
+        name: "supabase",
+        color: tagsColors.api,
+      },
+    ],
+    image: carrent, // Using existing image for now
+    link: "#",
+    source_code_link: "#",
+  },
+  {
+    name: "Everest College - Complete CRM System",
+    description:
+      "A comprehensive Customer Relationship Management system designed specifically for educational institutions. This full-scale CRM solution manages students, teachers, and administrators across multiple college locations with advanced sales tracking capabilities and dedicated mobile applications.",
+    tags: [
+      {
+        name: "React",
+        color: tagsColors.react,
+      },
+      {
+        name: "Node.js",
+        color: tagsColors.node,
+      },
+      {
+        name: "MongoDB",
+        color: tagsColors.mongo,
+      },
+      {
+        name: "Expo React Native",
+        color: tagsColors.react,
+      },
+      {
+        name: "supabase",
+        color: tagsColors.api,
+      },
+      {
+        name: "tailwind CSS",
+        color: tagsColors.css,
+      },
+    ],
+    image: jobit, // Using existing image for now
+    link: "#",
+    source_code_link: "#",
+  },
+  {
+    name: "InfoTech - Engineering CRM & PDF Automation",
+    description:
+      "InfoTech is a sophisticated CRM system specifically designed for engineering equipment testing and certification. The platform automates the creation of professional PDF forms for various types of engineering equipment testing procedures, ensuring compliance with industry standards.",
+    tags: [
+      {
+        name: "Next.js",
+        color: tagsColors.next,
+      },
+      {
+        name: "Tailwind CSS",
+        color: tagsColors.css,
+      },
+      {
+        name: "Expo React Native",
+        color: tagsColors.react,
+      },
+      {
+        name: "Node.js",
+        color: tagsColors.node,
+      },
+      {
+        name: "supabase",
+        color: tagsColors.api,
+      },
+      {
+        name: "MongoDB",
+        color: tagsColors.mongo,
+      },
+    ],
+    image: tripguide, // Using existing image for now
+    link: "#",
+    source_code_link: "#",
+  },
+  {
+    name: "Shuk-Sham - Modern Supermarket Network",
+    description:
+      "Shuk-Sham represents the next generation of e-commerce solutions for supermarket chains. This comprehensive platform combines the power of Next.js for lightning-fast frontend performance with WordPress WooCommerce as a headless CMS backend, providing modern shopping experience.",
+    tags: [
+      {
+        name: "Next.js",
+        color: tagsColors.next,
+      },
+      {
+        name: "WordPress",
+        color: tagsColors.api,
+      },
+      {
+        name: "WooCommerce",
+        color: tagsColors.api,
+      },
+      {
+        name: "Expo React Native",
+        color: tagsColors.react,
+      },
+      {
+        name: "tailwind CSS",
+        color: tagsColors.css,
+      },
+      {
+        name: "MongoDB",
+        color: tagsColors.mongo,
+      },
+      {
+        name: "supabase",
+        color: tagsColors.api,
+      },
+    ],
+    image: disney, // Using existing image for now
+    link: "#",
+    source_code_link: "#",
+  },
+  {
     name: "Stealth Telegram Extractor",
     description:
       "This tool is a highly efficient Telegram scraper capable of extracting data from private and closed groups undetected. It's designed to avoid blocks and bans, ensuring continuous operation and reliability. Ideal for users needing deep insights from Telegram's exclusive channels without compromising speed or data integrity.",
@@ -273,7 +383,7 @@ const projects = [
     source_code_link: "https://github.com/Nivnivu/telebot",
   },
   {
-    name: "Cross-Platform Dispatche",
+    name: "Cross-Platform Dispatcher",
     description:
       "Cross-Platform Dispatcher is an API that instantly relays messages from a Telegram channel to Facebook, WhatsApp, and X (the new Twitter). This tool simplifies multi-platform engagement, ensuring messages are uniformly distributed across key social networks, enhancing reach and connectivity with ease. Ideal for seamless digital communication strategies.",
     tags: [
@@ -301,149 +411,6 @@ const projects = [
     image: cross_platform,
     link: "https://github.com/Nivnivu/crossPlatforms",
     source_code_link: "https://github.com/Nivnivu/crossPlatforms",
-  },
-  {
-    name: "Disney+ Clone",
-    description:
-      "Disney+ Clone with CRUD API functions. Experminting GQL the fastes DB",
-    tags: [
-      {
-        name: "Next.js",
-        color: tagsColors.next,
-      },
-      {
-        name: "GQL",
-        color: tagsColors.gql,
-      },
-      {
-        name: "CSS",
-        color: tagsColors.css,
-      },
-    ],
-    image: disney,
-    source_code_link: "https://github.com/Nivnivu/disney-clone",
-    link: "https://github.com/Nivnivu/disney-clone",
-  },
-  {
-    name: "Whatsapp-GPT",
-    description:
-      "Using OpenAI API and Whatsapp.web.js i can tweek response from chatgpt and talk to him in a whatsapp conversation.",
-    tags: [
-      {
-        name: "Node.js",
-        color: tagsColors.node,
-      },
-      {
-        name: "OpenAI-API",
-        color: tagsColors.api,
-      },
-      {
-        name: "Whatsapp-web.js",
-        color: tagsColors.api,
-      },
-    ],
-    image: gptWhatsapp,
-    source_code_link: "https://github.com/Nivnivu/gpt-to-whatsapp",
-    link: "https://github.com/Nivnivu/gpt-to-whatsapp",
-  },
-  {
-    name: "Crypto Predictions",
-    description:
-      "Scraping, manipulating, arranging and making statistics about top crypo curncies.",
-    tags: [
-      {
-        name: "React",
-        color: tagsColors.react,
-      },
-      {
-        name: "Mongodb",
-        color: tagsColors.mongo,
-      },
-      {
-        name: "Node.js",
-        color: tagsColors.node,
-      },
-    ],
-    image: carrent,
-    source_code_link: "https://github.com/Nivnivu/crypto2",
-    link: "https://github.com/Nivnivu/crypto2",
-  },
-  {
-    name: "First Portfolio",
-    description: "My first ever portfolio",
-    tags: [
-      {
-        name: "React",
-        color: tagsColors.react,
-      },
-      {
-        name: "CSS",
-        color: tagsColors.css,
-      },
-    ],
-    image: firstPort,
-    source_code_link: "https://github.com/Nivnivu/personal-portfolio",
-    link: "https://nivnivu.github.io/personal-portfolio/",
-  },
-  {
-    name: "Pac-Man Game",
-    description: "A great and simple version of Pac-Man made with the basics",
-    tags: [
-      {
-        name: "HTML",
-        color: tagsColors.html,
-      },
-      {
-        name: "Javascript",
-        color: tagsColors.js,
-      },
-      {
-        name: "CSS",
-        color: tagsColors.css,
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/Nivnivu/pacman-game",
-    link: "https://nivnivu.github.io/pacman-game/",
-  },
-  {
-    name: "MovieLand",
-    description:
-      "An API app connected to movies api, giving data for any commerical movie.",
-    tags: [
-      {
-        name: "React",
-        color: tagsColors.react,
-      },
-      {
-        name: "CSS",
-        color: tagsColors.css,
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/Nivnivu/react-movie-api/tree/master",
-    link: "https://nivnivu.github.io/react-movie-api/",
-  },
-  {
-    name: "Pong Game",
-    description: "Old school good old pong",
-    tags: [
-      {
-        name: "HTML",
-        color: tagsColors.html,
-      },
-      {
-        name: "Javascript",
-        color: tagsColors.js,
-      },
-      {
-        name: "CSS",
-        color: tagsColors.css,
-      },
-    ],
-    image: pong,
-    source_code_link: "https://github.com/Nivnivu/pong-game",
-    link: "https://nivnivu.github.io/pong-game/",
   },
 ];
 

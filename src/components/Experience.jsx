@@ -19,77 +19,44 @@ const ExperienceCard = ({ experience }) => {
 
   const getTitleKey = (title) => {
     const keyMap = {
-      "Bots and Automation creator": "botsTitle",
-      "Full-Stack intern": "fullStackTitle",
-      "Full-Stack Student": "studentTitle",
-      "Self taught student": "selfTaughtTitle",
+      "Full-Stack Developer": "fullStackTitle",
+      "Bots and Automation Developer": "botsTitle",
+      "Web & Mobile App Developer": "appsTitle",
     };
     return keyMap[title];
   };
 
   const getCompanyKey = (company) => {
     const keyMap = {
-      Bots4All: "botsCompany",
       Zipy: "zipyCompany",
-      "Sv-college": "svCompany",
-      "Udemy/Coursera": "udemyCompany",
+      Bots4All: "botsCompany",
+      Apps4All: "appsCompany",
     };
     return keyMap[company];
   };
 
-  const getDateKey = (title, company, date) => {
-    // Handle the two different "Self taught student" entries
-    if (title === "Self taught student") {
-      if (date.includes("April 2022 - July 2023")) {
-        return "selfTaughtDate1";
-      } else if (date.includes("March 2021 - April 2022")) {
-        return "selfTaughtDate2";
-      }
-    }
-
+  const getDateKey = (title) => {
     const keyMap = {
-      "Bots and Automation creator": "botsDate",
-      "Full-Stack intern": "zipyDate",
-      "Full-Stack Student": "svDate",
+      "Full-Stack Developer": "zipyDate",
+      "Bots and Automation Developer": "botsDate",
+      "Web & Mobile App Developer": "appsDate",
     };
     return keyMap[title];
   };
 
-  const getPointsKey = (title, company, date) => {
-    // Handle the two different "Self taught student" entries
-    if (title === "Self taught student") {
-      if (date.includes("April 2022 - July 2023")) {
-        return "selfTaughtPoints1";
-      } else if (date.includes("March 2021 - April 2022")) {
-        return "selfTaughtPoints2";
-      }
-    }
-
+  const getPointsKey = (title) => {
     const keyMap = {
-      "Bots and Automation creator": "botsPoints",
-      "Full-Stack intern": "zipyPoints",
-      "Full-Stack Student": "svPoints",
+      "Full-Stack Developer": "zipyPoints",
+      "Bots and Automation Developer": "botsPoints",
+      "Web & Mobile App Developer": "appsPoints",
     };
     return keyMap[title];
   };
 
   const titleKey = getTitleKey(experience.title);
   const companyKey = getCompanyKey(experience.company_name);
-  const dateKey = getDateKey(
-    experience.title,
-    experience.company_name,
-    experience.date
-  );
-  const pointsKey = getPointsKey(
-    experience.title,
-    experience.company_name,
-    experience.date
-  );
-
-  // Special handling for the second "Self taught student" entry (Coursera)
-  const isCoursera =
-    experience.title === "Self taught student" &&
-    experience.date.includes("March 2021 - April 2022");
+  const dateKey = getDateKey(experience.title);
+  const pointsKey = getPointsKey(experience.title);
 
   return (
     <VerticalTimelineElement
@@ -118,11 +85,7 @@ const ExperienceCard = ({ experience }) => {
           className="text-secondary text-[16px] font-semibold"
           style={{ margin: 0 }}
         >
-          {isCoursera
-            ? t("experience.courseraCompany")
-            : companyKey
-            ? t(`experience.${companyKey}`)
-            : experience.company_name}
+          {companyKey ? t(`experience.${companyKey}`) : experience.company_name}
         </p>
       </div>
 

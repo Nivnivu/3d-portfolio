@@ -26,7 +26,9 @@ import sv from "./company/sv.png";
 import zipy from "./company/zipy.png";
 import coursera from "./company/coursera.png";
 import udemy from "./company/udemy.png";
-import carrent from "./carrent.png";
+import apps4all from "./company/apps4all.png";
+
+import carrent from "./carrent2.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import pong from "./pong.png";
@@ -55,6 +57,7 @@ import stealthTelegram from "./stealth_telegram.png";
 
 export {
   php,
+  apps4all,
   stealthTelegram,
   cross_platform,
   modernLogo,

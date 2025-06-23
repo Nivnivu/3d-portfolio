@@ -22,7 +22,7 @@ const Stars = (props) => {
   }, []);
 
   // Even more aggressive reduction for mobile devices (50% reduction from original)
-  const starCount = isMobile ? 1200 : 5000; // Further reduced to 1200 for better memory management
+  const starCount = isMobile ? 650 : 5000; // Further reduced to 1200 for better memory management
   const [sphere] = useState(() =>
     random.inSphere(new Float32Array(starCount), { radius: 1.2 })
   );

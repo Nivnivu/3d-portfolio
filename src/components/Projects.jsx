@@ -19,30 +19,24 @@ const ProjectCard = ({
 
   const getProjectKey = (projectName) => {
     const keyMap = {
+      "SMAP - Social Network for Sports": "smapTitle",
+      "Everest College - Complete CRM System": "everestTitle",
+      "InfoTech - Engineering CRM & PDF Automation": "infotechTitle",
+      "Shuk-Sham - Modern Supermarket Network": "shukShamTitle",
       "Stealth Telegram Extractor": "stealthTitle",
-      "Cross-Platform Dispatche": "crossPlatformTitle",
-      "Disney+ Clone": "disneyTitle",
-      "Whatsapp-GPT": "whatsappTitle",
-      "Crypto Predictions": "cryptoTitle",
-      "First Portfolio": "portfolioTitle",
-      "Pac-Man Game": "pacmanTitle",
-      MovieLand: "movieTitle",
-      "Pong Game": "pongTitle",
+      "Cross-Platform Dispatcher": "crossPlatformTitle",
     };
     return keyMap[projectName];
   };
 
   const getProjectDescKey = (projectName) => {
     const keyMap = {
+      "SMAP - Social Network for Sports": "smapDesc",
+      "Everest College - Complete CRM System": "everestDesc",
+      "InfoTech - Engineering CRM & PDF Automation": "infotechDesc",
+      "Shuk-Sham - Modern Supermarket Network": "shukShamDesc",
       "Stealth Telegram Extractor": "stealthDesc",
-      "Cross-Platform Dispatche": "crossPlatformDesc",
-      "Disney+ Clone": "disneyDesc",
-      "Whatsapp-GPT": "whatsappDesc",
-      "Crypto Predictions": "cryptoDesc",
-      "First Portfolio": "portfolioDesc",
-      "Pac-Man Game": "pacmanDesc",
-      MovieLand: "movieDesc",
-      "Pong Game": "pongDesc",
+      "Cross-Platform Dispatcher": "crossPlatformDesc",
     };
     return keyMap[projectName];
   };
@@ -58,9 +52,9 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full "
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px]  "
       >
-        <div className="relative w-full h-[290px]">
+        <div className="relative w-full h-[240px]">
           <img
             src={image}
             alt="project_image"

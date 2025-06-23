@@ -27,7 +27,7 @@ const resources = {
         description:
           "29 years old, I develop professional frontend, backend and mobile applications",
         descriptionLine2:
-          "As well as various bots, scraping and automation tools.",
+          "As well as various bots, scraping, automation and AI tools.",
       },
       // Services
       services: {
@@ -54,48 +54,31 @@ const resources = {
       // Experience
       experience: {
         current: "Present",
-        botsTitle: "Bots and Automation creator",
-        botsCompany: "Bots4All",
-        botsDate: "Dec 2023 - Present",
-        botsPoints: [
-          "As a freelancer specializing in automation I create advanced bots for Telegram, WhatsApp, Binance, and more.",
-          "My expertise includes developing tailored scraping bots and various automation solutions,",
-          "efficiently streamlining digital tasks for diverse needs.",
-        ],
-        fullStackTitle: "Full-Stack intern",
+        fullStackTitle: "Full-Stack Developer",
         zipyCompany: "Zipy",
-        zipyDate: "Jan 2023 - Dec 2023",
+        zipyDate: "2020 - 2022",
         zipyPoints: [
           "Developing and maintaining web applications using React.js and other related technologies.",
           "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-          "Learning from the best, about best practices related to programing and newer framewroks and laiberies",
-          "Thinking about efficency of both server and client side.",
+          "Learning from the best, about best practices related to programing and newer frameworks and libraries",
+          "Thinking about efficiency of both server and client side.",
         ],
-        studentTitle: "Full-Stack Student",
-        svCompany: "Sv-college",
-        svDate: "June 2022 - Jan 2023",
-        svPoints: [
-          "As i wanted to get stronger foundation in react,",
-          "I signed up into a physical college to imporve my skills",
-          "I Got a final grade of 85 points of 100",
-          "With this grade the college sent me to an internship.",
+        botsTitle: "Bots and Automation Developer",
+        botsCompany: "Bots4All",
+        botsDate: "2022 - 2023",
+        botsPoints: [
+          "Specialized in automation creating advanced bots for Telegram, WhatsApp, Binance, and more.",
+          "Developed tailored scraping bots and various automation solutions,",
+          "efficiently streamlining digital tasks for diverse client needs.",
         ],
-        selfTaughtTitle: "Self taught student",
-        udemyCompany: "Udemy/Coursera",
-        selfTaughtDate1: "April 2022 - July 2023",
-        selfTaughtPoints1: [
-          "Getting in to Javascript in full power",
-          "Finding the best online courses in full-stack",
-          "Mastering the class and making note and code examples of each lesson.",
-          "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-        courseraCompany: "Udemy/Coursera",
-        selfTaughtDate2: "March 2021 - April 2022",
-        selfTaughtPoints2: [
-          "Iv'e started learning math related to data analytics and computer science,",
-          "Topics like- linear algebra, Discrete mathematics, Calculus, Probabilty and Statistics.",
-          "Math Gave me a good understanding of concepts used in programing.",
-          "With this base i started learning Python, data structures and data manipulation.",
+        appsTitle: "Web & Mobile App Developer",
+        appsCompany: "Apps4All",
+        appsDate: "2023 - Present",
+        appsPoints: [
+          "Developing comprehensive web and mobile applications using modern tech stacks.",
+          "Building responsive web applications with React, Next.js, and TypeScript.",
+          "Creating cross-platform mobile apps using React Native and Flutter.",
+          "Implementing full-stack solutions with Node.js, MongoDB, and cloud services.",
         ],
       },
       // Testimonials
@@ -121,31 +104,24 @@ const resources = {
       ],
       // Projects
       projects: {
+        smapTitle: "SMAP - Social Network for Sports",
+        smapDesc:
+          "SMAP is the ultimate social networking platform for sports enthusiasts, often described as 'the Tinder of sports.' This innovative mobile application connects athletes and sports lovers based on their preferred activities, skill levels, and location. Built with Expo React Native for cross-platform compatibility and styled with NativeWindCSS for a sleek, responsive design. Users can discover nearby sports partners, join local games, create events, and build lasting connections through their shared passion for sports. The app features real-time matching, event scheduling, skill-based filtering, and integrated chat functionality.",
+        everestTitle: "Everest College - Complete CRM System",
+        everestDesc:
+          "A comprehensive Customer Relationship Management system designed specifically for educational institutions. This full-scale CRM solution manages students, teachers, and administrators across multiple college locations. The system includes advanced sales tracking capabilities, student enrollment management, teacher performance analytics, and administrative oversight tools. Features dedicated mobile applications for both students and teachers, enabling seamless communication, assignment submission, grade tracking, and schedule management. Built with modern technologies to ensure scalability, security, and user-friendly interfaces across all platforms.",
+        infotechTitle: "InfoTech - Engineering CRM & PDF Automation",
+        infotechDesc:
+          "InfoTech is a sophisticated CRM system specifically designed for engineering equipment testing and certification. The platform automates the creation of professional PDF forms for various types of engineering equipment testing procedures, ensuring compliance with industry standards. Built with Next.js for optimal performance and SEO, styled with Tailwind CSS for modern UI/UX, and includes both web and mobile applications using Expo React Native. The system features automated report generation, equipment tracking, client management, testing schedule coordination, and digital signature integration. Node.js backend ensures robust data processing and secure document management.",
+        shukShamTitle: "Shuk-Sham - Modern Supermarket Network",
+        shukShamDesc:
+          "Shuk-Sham represents the next generation of e-commerce solutions for supermarket chains. This comprehensive platform combines the power of Next.js for lightning-fast frontend performance with WordPress WooCommerce as a headless CMS backend, providing store workers with familiar inventory management tools while delivering customers a modern, secure shopping experience. The system includes both web and mobile applications (Expo React Native) for seamless omnichannel shopping. Features include real-time inventory tracking, personalized shopping recommendations, multiple payment gateways, delivery scheduling, and advanced analytics for business intelligence.",
         stealthTitle: "Stealth Telegram Extractor",
         stealthDesc:
           "This tool is a highly efficient Telegram scraper capable of extracting data from private and closed groups undetected. It's designed to avoid blocks and bans, ensuring continuous operation and reliability. Ideal for users needing deep insights from Telegram's exclusive channels without compromising speed or data integrity.",
-        crossPlatformTitle: "Cross-Platform Dispatche",
+        crossPlatformTitle: "Cross-Platform Dispatcher",
         crossPlatformDesc:
           "Cross-Platform Dispatcher is an API that instantly relays messages from a Telegram channel to Facebook, WhatsApp, and X (the new Twitter). This tool simplifies multi-platform engagement, ensuring messages are uniformly distributed across key social networks, enhancing reach and connectivity with ease. Ideal for seamless digital communication strategies.",
-        disneyTitle: "Disney+ Clone",
-        disneyDesc:
-          "Disney+ Clone with CRUD API functions. Experminting GQL the fastes DB",
-        whatsappTitle: "Whatsapp-GPT",
-        whatsappDesc:
-          "Using OpenAI API and Whatsapp.web.js i can tweek response from chatgpt and talk to him in a whatsapp conversation.",
-        cryptoTitle: "Crypto Predictions",
-        cryptoDesc:
-          "Scraping, manipulating, arranging and making statistics about top crypo curncies.",
-        portfolioTitle: "First Portfolio",
-        portfolioDesc: "My first ever portfolio",
-        pacmanTitle: "Pac-Man Game",
-        pacmanDesc:
-          "A great and simple version of Pac-Man made with the basics",
-        movieTitle: "MovieLand",
-        movieDesc:
-          "An API app connected to movies api, giving data for any commerical movie.",
-        pongTitle: "Pong Game",
-        pongDesc: "Old school good old pong",
       },
       // Certificates
       certificates: {
@@ -175,7 +151,7 @@ const resources = {
         projectsSubtitle: "My work",
         projectsTitle: "Projects.",
         projectsDescription:
-          "Following projects showcases my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories some have live demos in it. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.",
+          "Following projects showcases my skills and experience through real-world examples of my work. Each project is briefly described with some links, All the projects are real working projects developed for companies and clients.",
 
         // Certificates section
         certificatesSubtitle: "My Study",
@@ -230,7 +206,8 @@ const resources = {
         name: "ניב",
         description:
           "בן 29 מתמחה בפיתוח יישומי פרונטאנד, בקאנד ומובייל מקצועיים,",
-        descriptionLine2: "וכן בוטים, כלי Scraping ופתרונות אוטומציה מתקדמים.",
+        descriptionLine2:
+          "וכן בוטים, כלי Scraping ופתרונות אוטומציה ו-AI  מתקדמים.",
       },
       // Services - Hebrew
       services: {
@@ -257,48 +234,31 @@ const resources = {
       // Experience - Hebrew
       experience: {
         current: "נוכחי",
-        botsTitle: "מפתח בוטים ואוטומציה",
-        botsCompany: "Bots4All",
-        botsDate: "דצמבר 2023 - נוכחי",
-        botsPoints: [
-          "כפרילנסר המתמחה באוטומציה אני יוצר בוטים מתקדמים לטלגרם, וואטסאפ, בינאנס ועוד.",
-          "המומחיות שלי כוללת פיתוח בוטי גריפה מותאמים ופתרונות אוטומציה שונים,",
-          "יעול יעיל של משימות דיגיטליות לצרכים מגוונים.",
-        ],
-        fullStackTitle: "מתמחה Full-Stack",
+        fullStackTitle: "מפתח Full-Stack",
         zipyCompany: "Zipy",
-        zipyDate: "ינואר 2023 - דצמבר 2023",
+        zipyDate: "2020 - 2022",
         zipyPoints: [
           "פיתוח ותחזוקה של אפליקציות אינטרנט באמצעות React.js וטכנולוגיות קשורות אחרות.",
           "שיתוף פעולה עם צוותים רב-תחומיים כולל מעצבים, מנהלי מוצר ומפתחים אחרים ליצירת מוצרים איכותיים.",
           "למידה מהטובים ביותר, על שיטות עבודה מתקדמות הקשורות לתכנות ופריימוורקים וספריות חדשות יותר",
           "חשיבה על יעילות של צד השרת וצד הלקוח.",
         ],
-        studentTitle: "סטודנט Full-Stack",
-        svCompany: "מכללת SV",
-        svDate: "יוני 2022 - ינואר 2023",
-        svPoints: [
-          "כיוון שרציתי לקבל בסיס חזק יותר בריאקט,",
-          "נרשמתי למכללה פיזית כדי לשפר את הכישורים שלי",
-          "קיבלתי ציון סופי של 85 נקודות מתוך 100",
-          "עם הציון הזה המכללה שלחה אותי להתמחות.",
+        botsTitle: "מפתח בוטים ואוטומציה",
+        botsCompany: "Bots4All",
+        botsDate: "2022 - 2023",
+        botsPoints: [
+          "התמחות באוטומציה ויצירת בוטים מתקדמים לטלגרם, וואטסאפ, בינאנס ועוד.",
+          "פיתוח בוטי גריפה מותאמים ופתרונות אוטומציה שונים,",
+          "יעול יעיל של משימות דיגיטליות לצרכי לקוחות מגוונים.",
         ],
-        selfTaughtTitle: "סטודנט אוטודידקט",
-        udemyCompany: "Udemy/Coursera",
-        selfTaughtDate1: "אפריל 2022 - יולי 2023",
-        selfTaughtPoints1: [
-          "כניסה לג'אווהסקריפט בכוח מלא",
-          "מציאת הקורסים הטובים ביותר באינטרנט בפול-סטאק",
-          "שליטה בשיעור ויצירת הערות ודוגמאות קוד של כל שיעור.",
-          "השתתפות בביקורות קוד ומתן משוב בונה למפתחים אחרים.",
-        ],
-        courseraCompany: "Udemy/Coursera",
-        selfTaughtDate2: "מרץ 2021 - אפריל 2022",
-        selfTaughtPoints2: [
-          "לימוד מעמיק של מתמטיקה הנדרשת למדעי המחשב ואנליזת נתונים.",
-          "התמחות בנושאים כגון אלגברה לינארית, מתמטיקה דיסקרטית, חשבון אינפיניטסימלי, הסתברות וסטטיסטיקה.",
-          "לימודי המתמטיקה העניקו בסיס אנליטי איתן להבנת מושגי יסוד בתכנות ואלגוריתמיקה.",
-          "על בסיס זה, התחלתי ללמוד Python, תוך התמקדות במבני נתונים, מניפולציית נתונים, ועקרונות תכנות מונחה עצמים.",
+        appsTitle: "מפתח אפליקציות ווב ומובייל",
+        appsCompany: "Apps4All",
+        appsDate: "2023 - נוכחי",
+        appsPoints: [
+          "פיתוח אפליקציות ווב ומובייל מקיפות באמצעות טכנולוגיות מודרניות.",
+          "בניית אפליקציות ווב רספונסיביות עם React, Next.js ו-TypeScript.",
+          "יצירת אפליקציות מובייל רב-פלטפורמה באמצעות React Native ו-Flutter.",
+          "יישום פתרונות Full-Stack עם Node.js, MongoDB ושירותי ענן.",
         ],
       },
       // Testimonials - Hebrew
@@ -324,33 +284,24 @@ const resources = {
       ],
       // Projects - Hebrew
       projects: {
+        smapTitle: "אפליקציית מובייל SMAP - רשת חברתית לספורט",
+        smapDesc:
+          "SMAP היא פלטפורמת הרשת החברתית האולטימטיבית לחובבי ספורט, המתוארת לעתים קרובות כ'הטינדר של הספורט.' אפליקציית מובייל חדשנית זו מחברת בין ספורטאים וחובבי ספורט על בסיס פעילויותיהם המועדפות, רמת הכישורים והמיקום שלהם. נבנתה עם Expo React Native לתאימות חוצת פלטפורמות ועוצבה עם NativeWindCSS לעיצוב חלק ורספונסיבי. משתמשים יכולים לגלות שותפי ספורט בקרבתם, להצטרף למשחקים מקומיים, ליצור אירועים, ולבנות קשרים מתמשכים דרך התשוקה המשותפת שלהם לספורט. האפליקציה כוללת התאמה בזמן אמת, תזמון אירועים, סינון מבוסס כישורים ופונקציונליות צ'אט משולבת.",
+        everestTitle: "מכללת אוורסט - מערכת CRM מקיפה",
+        everestDesc:
+          "מערכת ניהול קשרי לקוחות מקיפה המיועדת במיוחד למוסדות חינוך. פתרון CRM בקנה מידה מלא זה מנהל סטודנטים, מורים ומנהלים במספר מיקומי מכללה. המערכת כוללת יכולות מעקב מכירות מתקדמות, ניהול רישום סטודנטים, ניתוח ביצועי מורים וכלי פיקוח מנהלי. כוללת אפליקציות מובייל ייעודיות הן לסטודנטים והן למורים, המאפשרות תקשורת חלקה, הגשת מטלות, מעקב ציונים וניהול לוח זמנים. נבנתה עם טכנולוגיות מודרניות להבטחת מדרגיות, אבטחה וממשקי משתמש ידידותיים בכל הפלטפורמות.",
+        infotechTitle: "אינפוטק - CRM הנדסי ואוטומציית PDF",
+        infotechDesc:
+          "אינפוטק היא מערכת CRM מתוחכמת המיועדת במיוחד לבדיקות וסיווג ציוד הנדסי. הפלטפורמה מאטמטת את יצירת טפסי PDF מקצועיים עבור סוגים שונים של הליכי בדיקת ציוד הנדסי, תוך הבטחת עמידה בתקני התעשייה. נבנתה עם Next.js לביצועים ו-SEO אופטימליים, עוצבה עם Tailwind CSS ל-UI/UX מודרני, וכוללת יישומי ווב ומובייל באמצעות Expo React Native. המערכת כוללת יצירת דוחות אוטומטית, מעקב ציוד, ניהול לקוחות, תיאום לוחות זמנים לבדיקות ואינטגרציה של חתימה דיגיטלית. Backend של Node.js מבטיח עיבוד נתונים חזק וניהול מסמכים מאובטח.",
+        shukShamTitle: "שוק-שם - רשת סופרמרקטים מודרנית",
+        shukShamDesc:
+          "שוק-שם מייצגת את הדור הבא של פתרונות מסחר אלקטרוני עבור רשתות סופרמרקטים. פלטפורמה מקיפה זו משלבת את העוצמה של Next.js לביצועי פרונטאנד מהירים כברק עם WordPress WooCommerce כ-CMS headless backend, המספקת לעובדי החנות כלי ניהול מלאי מוכרים תוך מתן לקוחות חוויית קנייה מודרנית ומאובטחת. המערכת כוללת יישומי ווב ומובייל (Expo React Native) לקנייה אומני-ערוצית חלקה. התכונות כוללות מעקב מלאי בזמן אמת, המלצות קנייה מותאמות אישית, שערי תשלום מרובים, תזמון משלוחים וניתוח מתקדם לאינטליגנציה עסקית.",
         stealthTitle: "Stealth Telegram Extractor",
         stealthDesc:
           "כלי Scraping מתקדם ב-Python לחילוץ נתונים מקבוצות טלגרם פרטיות וסגורות, תוך עקיפת מנגנוני חסימה וניהול Sessions. הפרויקט מדגים יכולות עבודה עם APIs, תקשורת רשת א-סינכרונית, והתמודדות עם אתגרי אבטחה דינמיים.",
         crossPlatformTitle: "Cross-Platform Dispatcher",
         crossPlatformDesc:
           "API מבוסס Node.js המאפשר הפצת הודעות בזמן אמת מערוץ טלגרם למספר רשתות חברתיות במקביל (Facebook, WhatsApp, X). הפרויקט מדגים ארכיטקטורת Microservice, ניהול תורים, ואינטגרציה עם APIs של צד-שלישי.",
-        disneyTitle: "Disney+ Clone",
-        disneyDesc:
-          "יישום Full-Stack של שיבוט Disney+, הכולל ממשק משתמש רספונסיבי ב-React ו-API מבוסס GraphQL לביצוע פעולות CRUD מול מסד נתונים MongoDB. הפרויקט מדגים ארכיטקטורת שרת-לקוח מודרנית ושליטה בטכנולוגיות צד-לקוח וצד-שרת.",
-        whatsappTitle: "WhatsApp-GPT",
-        whatsappDesc:
-          "אינטגרציה בין OpenAI API לספריית whatsapp-web.js ליצירת צ'אטבוט חכם על גבי WhatsApp, עם יכולת להתאים ולכוונן את תגובות המודל.",
-        cryptoTitle: "Crypto Predictions",
-        cryptoDesc:
-          "פרויקט Data Science ב-Python הכולל איסוף (Scraping), עיבוד, וניתוח סטטיסטי של נתונים על מטבעות קריפטו מובילים, במטרה לזהות מגמות.",
-        portfolioTitle: "פורטפוליו ראשון",
-        portfolioDesc:
-          "הגרסה הראשונה של תיק העבודות שלי, שנבנתה עם HTML, CSS ו-JavaScript ונילה.",
-        pacmanTitle: "משחק פק-מן",
-        pacmanDesc:
-          "יישום של משחק הארקייד הקלאסי פק-מן באמצעות JavaScript, HTML Canvas ו-CSS.",
-        movieTitle: "MovieLand",
-        movieDesc:
-          "אפליקציית React המתחברת ל-API חיצוני (OMDb) כדי להציג מידע על סרטים, תוך יישום של חיפוש וסינון דינמי.",
-        pongTitle: "משחק פונג",
-        pongDesc:
-          "גרסת רטרו למשחק פונג הקלאסי, פותחה באמצעות JavaScript בסיסי לתרגול מניפולציה של ה-DOM.",
       },
       // Certificates - Hebrew
       certificates: {
@@ -374,7 +325,7 @@ const resources = {
 
         // Experience section - Hebrew
         experienceSubtitle: "מה עשיתי עד כה",
-        experienceTitle: "ניסיון תעסוקתי.",
+        experienceTitle: ".ניסיון תעסוקתי",
 
         // Projects section - Hebrew
         projectsSubtitle: "העבודות שלי",
